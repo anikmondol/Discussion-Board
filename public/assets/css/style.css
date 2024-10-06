@@ -1,0 +1,13 @@
+.title-image{
+    width: 40px !important;
+}
+
+a{
+    color: rgb(22, 149, 199) !important;
+    font-weight: 700;
+}
+
+.header-title{
+    font-size: 18px;
+    font-weight: 700;
+}
