@@ -1,12 +1,11 @@
 <?php
 
-try{
+$host = "localhost";
+$user_name = "root";
+$password = null;
+$database = "discussion_board";
 
-    $conn = new PDO("mysql:host=localhost;dbname=discussion_board", "root", null);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-   
-}catch(PDOException $err){
-    echo "some error".$err;
-}
+$conn = new mysqli($host, $user_name, $password, $database);
+
 
 ?>
