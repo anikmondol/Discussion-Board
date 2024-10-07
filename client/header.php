@@ -24,6 +24,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./server/requests.php?logout=true">LogOut</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?ask=true">Ask A Question</a>
+                    </li>
                 <?php } else { ?>
                     <!-- Login/SignUp Links for guests -->
                     <li class="nav-item">

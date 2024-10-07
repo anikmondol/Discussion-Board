@@ -1,5 +1,5 @@
-<?php 
-session_start(); 
+<?php
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -19,25 +19,23 @@ session_start();
     <header>
         <?php include("./client/header.php"); ?>
     </header>
-    
+
     <main>
         <?php
-       
+
         if (!isset($_SESSION['user_info']['username'])) {
             if (isset($_REQUEST['signup'])) {
                 include("./client/signup.php");
-            }
-            elseif (isset($_REQUEST['login'])) {
+            } elseif (isset($_REQUEST['login'])) {
                 include("./client/login.php");
             } else {
-               
             }
-        } else {
-            
+        } else if (isset($_REQUEST['ask'])) {
+            include("./client/ask.php");
         }
         ?>
     </main>
-    
+
     <footer>
         <!-- Footer can be added here -->
     </footer>
