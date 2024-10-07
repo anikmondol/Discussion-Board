@@ -1,13 +1,54 @@
-.title-image{
+.title-image {
     width: 40px !important;
 }
 
-a{
+a {
     color: rgb(22, 149, 199) !important;
     font-weight: 700;
 }
 
-.header-title{
+.header-title {
     font-size: 18px;
     font-weight: 700;
+}
+
+/* signUp  section start*/
+
+#signup .singup-main {
+    width: 50%;
+    margin: 0px auto;
+}
+
+/* signUp  section end*/
+
+
+
+/* ---------------------------------------
+Responsive Section
+--------------------------------------- */
+
+/* ========= Laptop Device ========== */
+
+@media (min-width: 992px) {}
+
+/* ========= Tablet Device ========== */
+
+@media (max-width: 992px) {}
+
+
+
+/* ========= Mobile Device ========== */
+
+
+@media (max-width: 767px) {
+
+    /* signUp  section start*/
+
+    #signup .singup-main {
+        width: 96%;
+        margin: 0px auto;
+    }
+
+    /* signUp  section end*/
+
 }

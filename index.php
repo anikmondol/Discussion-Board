@@ -18,30 +18,41 @@
     </header>
     <main>
 
+
+        <?php
+        if (isset($_REQUEST['signup'])) {
+            include("./client/signup.php");
+        } else if (isset($_REQUEST['login'])) {
+            include("./client/login.php");
+        }else{
+            // 
+        }
+        ?>
+
     </main>
     <footer>
 
     </footer>
 
 
-    
-  
-<!-- App js -->
-<script src="./public/assets/js/vendor.min.js"></script>
-<script src="./public/assets/js/app.js"></script>
 
-<!-- Knob charts js -->
-<script src="./public/assets/libs/jquery-knob/jquery.knob.min.js"></script>
 
-<!-- Sparkline Js-->
-<script src="./public/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <!-- App js -->
+    <script src="./public/assets/js/vendor.min.js"></script>
+    <script src="./public/assets/js/app.js"></script>
 
-<script src="./public/assets/libs/morris.js/morris.min.js"></script>
+    <!-- Knob charts js -->
+    <script src="./public/assets/libs/jquery-knob/jquery.knob.min.js"></script>
 
-<script src="./public/assets/libs/raphael/raphael.min.js"></script>
+    <!-- Sparkline Js-->
+    <script src="./public/assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
 
-<!-- Dashboard init-->
-<script src="./public/assets/js/pages/dashboard.js"></script>
+    <script src="./public/assets/libs/morris.js/morris.min.js"></script>
+
+    <script src="./public/assets/libs/raphael/raphael.min.js"></script>
+
+    <!-- Dashboard init-->
+    <script src="./public/assets/js/pages/dashboard.js"></script>
 </body>
 
 </html>
