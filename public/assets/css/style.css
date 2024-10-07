@@ -14,8 +14,8 @@ a {
 
 /* signUp  section start*/
 
-#signup .singup-main {
-    width: 50%;
+#signup .signup-main {
+    width: 50% !important;
     margin: 0px auto;
 }
 
@@ -33,7 +33,14 @@ Responsive Section
 
 /* ========= Tablet Device ========== */
 
-@media (max-width: 992px) {}
+@media (max-width: 992px) {
+
+    #signup .signup-main {
+        width: 100% !important;
+        margin: 0px auto;
+    }
+
+}
 
 
 
@@ -44,8 +51,8 @@ Responsive Section
 
     /* signUp  section start*/
 
-    #signup .singup-main {
-        width: 96%;
+    #signup .signup-main {
+        width: 96% !important;
         margin: 0px auto;
     }
 

@@ -8,7 +8,3 @@
 <link href="./public/assets/css/icons.min.css" rel="stylesheet" type="text/css">
 <link href="./public/assets/css/style.css" rel="stylesheet" type="text/css">
 <script src="./public/assets/js/config.js"></script>
-
-
-
-
