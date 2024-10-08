@@ -11,18 +11,13 @@
                     </div>
                     <div class="mb-3">
                         <label for="desertion" class="form-label">Desertion</label>
-                        <textarea name="desertion" type="text" class="form-control" id="desertion" placeholder="Enter Desertion"></textarea>
+                        <textarea name="description" type="text" class="form-control" id="desertion" placeholder="Enter Desertion"></textarea>
                     </div>
                     <div class="mb-3">
                         <label for="category" class="form-label">Category</label>
-                        <select class="form-select">
-                            <option selected="">Select Category</option>
-                            <option value="mobiles">Mobiles</option>
-                            <option value="general">General</option>
-                            <option value="coding">Coding</option>
-                        </select>
+                        <?php include("./client/category.php") ?>
                     </div>
-                    <button name="login" type="submit" class="btn btn-primary">Submit</button>
+                    <button name="ask" type="submit" class="btn btn-primary">Ask Question</button>
                 </form>
             </div>
         </div>

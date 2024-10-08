@@ -22,7 +22,7 @@
                 if (isset($_SESSION['user_info']['username'])) {
                 ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="./server/requests.php?logout=true">LogOut</a>
+                        <a class="nav-link" href="./server/requests.php?logout=true">Log out</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?ask=true">Ask A Question</a>
