@@ -11,8 +11,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="desertion" class="form-label">Desertion</label>
-                        <textarea name="description" type="text" class="form-control" id="desertion" placeholder="Enter Desertion"></textarea>
-                    </div>
+                        <textarea rows="5" name="description" type="text" class="form-control" id="desertion" placeholder="Enter Desertion . . ."></textarea>
+                    </div> 
                     <div class="mb-3">
                         <label for="category" class="form-label">Category</label>
                         <?php include("./client/category.php") ?>

@@ -25,17 +25,25 @@ session_start();
 
         if (!isset($_SESSION['user_info']['username'])) {
             if (isset($_REQUEST['signup'])) {
+
                 include("./client/signup.php");
             } elseif (isset($_REQUEST['login'])) {
+
                 include("./client/login.php");
             } else {
             }
         } else if (isset($_REQUEST['ask'])) {
+
             include("./client/ask.php");
-        }else if (isset($_REQUEST['question_id'])) {
+        } else if (isset($_REQUEST['question_id'])) {
+
             $question_id = $_REQUEST['question_id'];
             include("./client/question-details.php");
-        }else{
+        } else if (isset($_REQUEST['category_id'])) {
+
+            $category_id = $_REQUEST['category_id'];
+            include("./client/questions.php");
+        } else {
             include("./client/questions.php");
         }
         ?>
