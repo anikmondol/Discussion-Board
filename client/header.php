@@ -10,7 +10,7 @@
 
         <!-- Middle: Navbar links -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav gap-1  gap-lg-3">
+            <ul class="navbar-nav gap-1  gap-lg-2">
                 <!-- Home link -->
                 <li class="nav-item">
                     <a class="nav-link active" href="./">Home</a>
@@ -18,7 +18,6 @@
 
                 <!-- PHP logic for session handling -->
                 <?php
-                // Check if 'user_info' session is set and the user is logged in
                 if (isset($_SESSION['user_info']['username'])) {
                 ?>
                     <li class="nav-item">
@@ -26,6 +25,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="?ask=true">Ask A Question</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="?user_id=<?= $_SESSION['user_info']['id'] ?>">My Questions</a>
                     </li>
                 <?php } else { ?>
                     <!-- Login/SignUp Links for guests -->
@@ -42,7 +44,7 @@
                     <a class="nav-link" href="#">Category</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Latest Questions</a>
+                    <a class="nav-link" href="?latest=true">Latest Questions</a>
                 </li>
             </ul>
         </div>
@@ -56,6 +58,11 @@
                 <i class="fa-solid fa-bars"></i>
             </button>
 
+
+            <form class="d-none d-lg-flex" action="">
+                <input name="search" class="form-control me-2" type="search" placeholder="Search . . .">
+                <button class="btn btn-info" type="submit">Search</button>
+            </form>
 
             <!-- Theme mode switch -->
             <li class="nav-link ml-2" id="theme-mode">

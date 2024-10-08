@@ -43,6 +43,17 @@ session_start();
 
             $category_id = $_REQUEST['category_id'];
             include("./client/questions.php");
+        } else if (isset($_REQUEST['user_id'])) {
+
+            $user_id = $_REQUEST['user_id'];
+            include("./client/questions.php");
+        } else if (isset($_REQUEST['latest'])) {
+
+            include("./client/questions.php");
+        } else if (isset($_REQUEST['search'])) {
+            $search = $_REQUEST['search'];
+
+            include("./client/questions.php");
         } else {
             include("./client/questions.php");
         }

@@ -51,6 +51,7 @@ if (isset($_REQUEST['signup'])) {
             echo "Invalid password.";
         }
     } else {
+        
         echo "No user found with the given email.";
     }
 

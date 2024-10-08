@@ -6,10 +6,19 @@
                 <?php
 
                 include("./common/db.php");
-
+              
                 if (isset($_REQUEST['category_id'])) {
                     $query = "SELECT * FROM `question` where category_id='$category_id'";
-                }else{
+                }elseif (isset($_REQUEST['user_id'])) {
+
+                    $query = "SELECT * FROM `question` where user_id='$user_id'";
+                }elseif (isset($_REQUEST['latest'])) {
+                    $query = "SELECT * FROM `question` order by id desc";
+                }
+                elseif (isset($_REQUEST['search'])) {
+                    $query = "SELECT * FROM `question` where `title` like '%$search%' ";
+                }
+                else{
                     $query = "SELECT * FROM `question`";
                 }
 
@@ -20,7 +29,9 @@
                     <a href="?question_id=<?= $result['id'] ?>">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="fw-bold"> <?= $result['title'] ?></h4>
+                                <h4 class="fw-bold"> <?= $result['title']  ?> 
+                              
+                            </h4>
                             </div>
                         </div>
                     </a>
