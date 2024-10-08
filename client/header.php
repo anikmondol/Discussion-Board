@@ -10,7 +10,7 @@
 
         <!-- Middle: Navbar links -->
         <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
-            <ul class="navbar-nav">
+            <ul class="navbar-nav gap-1  gap-lg-3">
                 <!-- Home link -->
                 <li class="nav-item">
                     <a class="nav-link active" href="./">Home</a>
@@ -49,7 +49,7 @@
 
         <!-- Right side: Brand and logo -->
 
-        <div class="d-flex justify-content-center align-items-center gap-2">
+        <div class="d-flex justify-content-center align-items-center gap-2 mt-3 mt-lg-0">
 
             <!-- Navbar Toggler with default icon class -->
             <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

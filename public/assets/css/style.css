@@ -5,12 +5,18 @@
 a {
     color: rgb(22, 149, 199) !important;
     font-weight: 700;
+    font-size: 17px !important;
 }
 
 .header-title {
     font-size: 18px;
     font-weight: 700;
+    text-align: center;
 }
+
+
+
+
 
 /* signUp  section start*/
 

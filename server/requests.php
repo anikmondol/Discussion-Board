@@ -89,4 +89,6 @@ if (isset($_REQUEST['signup'])) {
     } else {
         echo "Error: Question could not be added to the website.";
     }
+} else{
+    
 }

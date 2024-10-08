@@ -32,6 +32,11 @@ session_start();
             }
         } else if (isset($_REQUEST['ask'])) {
             include("./client/ask.php");
+        }else if (isset($_REQUEST['question_id'])) {
+            $question_id = $_REQUEST['question_id'];
+            include("./client/question-details.php");
+        }else{
+            include("./client/questions.php");
         }
         ?>
     </main>
