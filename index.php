@@ -12,7 +12,7 @@ session_start();
 
     <!-- Common Files  -->
     <?php include("./client/commonFiles.php"); ?>
-
+    
 </head>
 
 <body>
@@ -31,6 +31,7 @@ session_start();
 
                 include("./client/login.php");
             } else {
+                include("./client/home.php");
             }
         } else if (isset($_REQUEST['ask'])) {
 
@@ -52,7 +53,6 @@ session_start();
             include("./client/questions.php");
         } else if (isset($_REQUEST['search'])) {
             $search = $_REQUEST['search'];
-
             include("./client/questions.php");
         } else {
             include("./client/questions.php");
@@ -60,10 +60,7 @@ session_start();
         ?>
     </main>
 
-    <footer>
-        <!-- Footer can be added here -->
-    </footer>
-
+    
     <!-- JS Files -->
     <script src="./public/assets/js/vendor.min.js"></script>
     <script src="./public/assets/js/app.js"></script>

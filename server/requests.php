@@ -2,13 +2,11 @@
 session_start();
 include("../common/db.php"); 
 
-
 if (isset($_REQUEST['signup'])) {
     $name = $_REQUEST['name'];
     $email = $_REQUEST['email'];
     $password = password_hash($_REQUEST['password'], PASSWORD_DEFAULT); 
     $address = $_REQUEST['address'];
-
   
     $stmt = $conn->prepare("INSERT INTO `users`(`id`, `name`, `email`, `password`, `address`) VALUES (null, ?, ?, ?, ?)");
     $stmt->bind_param("ssss", $name, $email, $password, $address);
@@ -92,4 +90,15 @@ if (isset($_REQUEST['signup'])) {
         echo "Error: Question could not be added to the website.";
     }
 
+} elseif (isset($_REQUEST['delete'])) {
+    $delete = $_REQUEST['delete'];
+    $query = $conn->prepare("DELETE FROM `question` WHERE id=$delete");
+    
+    if ($query->execute()) {
+       
+        $_SESSION['delete'] = "Password must be at least one number!!";
+        header("Location: /Discussion-Board");
+    } else {
+       echo "Question Not Delete";
+    }
 }

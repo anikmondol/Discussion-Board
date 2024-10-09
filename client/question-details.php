@@ -1,5 +1,4 @@
 <div class="container" id="question-details">
-
     <?php
     include("./common/db.php");
     $query = "SELECT * FROM `question` where id='$question_id'";
@@ -13,9 +12,7 @@
         $desertion = $row[2];
         $category_id = $row[3];
     }
-
     ?>
-
     <div class="container" id="signup">
         <div class="row">
             <div class="col-lg-9">
@@ -39,18 +36,13 @@
                     $category_query = "SELECT name FROM `category` where id='$category_id'";
                     $category_result = $conn->query($category_query);
                     $category_row = $category_result->fetch_assoc();
-
-
                     $query = "SELECT * FROM `question` where category_id='$category_id' and id!=$question_id";
                     $result = $conn->query($query);
                     $rows = $result->fetch_all(); ?>
-
                     <h2 class="header-title mb-3  fs-1 fw-bold m-5"> <?= ucfirst($category_row['name']); ?> </h2>
-
                     <?php
                     foreach ($rows as $key => $row) {
                     ?>
-
                         <div class="card">
                             <div class="card-body">
                                 <a href="?question_id=<?= $row[0] ?>">
@@ -63,6 +55,4 @@
             </div>
         </div>
     </div>
-
-
 </div>
